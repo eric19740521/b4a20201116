@@ -6,7 +6,7 @@ Android APP手機開發工具--B4A 多頁面,使用B4XPages
 https://www.b4x.com/android/forum/threads/b4x-b4xpages-cross-platform-and-simple-framework-for-managing-multiple-pages.118901/#content
 
 
-每個頁面:
+## 每個頁面:
 ```B4X:
 
 Sub Class_Globals
@@ -26,35 +26,36 @@ Private Sub B4XPage_Created (Root1 As B4XView)
 End Sub
 ```
 
-新增一個頁面
-B4X:
+## 新增一個頁面
+```B4X:
 Dim Page2 As B4XPage2
 Page2.Initialize
 B4XPages.AddPage("Page 2", Page2)
+```
 
-顯示一個頁面:
-B4X:
+## 顯示一個頁面:
+```B4X:
 B4XPages.ShowPage("Page 3")
+```
 
-
-當作一個物件,改變頁面裡面的一個物件值:
-B4X:
+## 當作一個物件,改變頁面裡面的一個物件值:
+```B4X:
 Page3 = B4XPages.GetPage("Page 3")
 Page3.Button1.Text = "abc"
+```
 
-
-設定頁面標題:
-B4X:
+## 設定頁面標題:
+```B4X:
 B4XPages.SetTitle(Me, "Draw Something")
+```
 
-
-回到主頁面:
-B4X:
+## 回到主頁面:
+```B4X:
 B4XPages.ShowPageAndRemovePreviousPages("MainPage")
+```
 
-
-關閉頁面:
-'Return True to close, False to cancel
+## 關閉頁面:
+```'Return True to close, False to cancel
 Private Sub B4XPage_CloseRequest As ResumableSub
     Dim sf As Object = xui.Msgbox2Async("Close?", "Title", "Yes", "Cancel", "No", Null)
     Wait For (sf) Msgbox_Result (Result As Int)
@@ -63,12 +64,12 @@ Private Sub B4XPage_CloseRequest As ResumableSub
     End If
     Return False
 End Sub
+```
 
 
 
 
-
-B4XPages Events:
+## B4XPages Events:
 * B4XPage_Created-創建頁面時調用一次。 這將在頁面變得可見之前或在調用B4XPages.AddPageAndCreate之後發生。
 * B4XPage_Appear-每當頁面可見時調用。
 * B4XPage_Disappear-每當可見頁面消失時調用。
