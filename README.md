@@ -87,4 +87,4 @@ End Sub
 
 1.File－－＞New－－＞b4apages
 
-2.
+2.少了目錄 Shared Files
